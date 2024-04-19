@@ -6,7 +6,8 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     // return view('welcome');
 
-    $users = DB::select('select * from users');
+    // $users = DB::select('select * from users');
+    $users = DB::select('select *from users where email=?',['omardachia@gmail.com']);
 
     dd($users);
 });
