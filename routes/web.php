@@ -6,11 +6,12 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     // return view('welcome');
 
-    $users = DB::select('select * from users');
+    // $users = DB::select('select * from users');
     // $user = DB::insert('insert into users (name, email, password) values(?,?,?)',['Umar Imam', 'umar.dachias@gmail.com','Password']);
     // dd($user);
     // $users = DB::select('select *from users where email=?',['omardachia@gmail.com']);
-    $user = DB::update("update users set email = 'umar@gmail.com' where id=2");
+    // $user = DB::update("update users set email = 'umar@gmail.com' where id=2");
+   $users = DB::table('users')->get();
     dd($users);
 });
 
