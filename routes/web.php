@@ -11,7 +11,7 @@ Route::get('/', function () {
     // dd($user);
     // $users = DB::select('select *from users where email=?',['omardachia@gmail.com']);
     // $user = DB::update("update users set email = 'umar@gmail.com' where id=2");
-   $users = DB::table('users')->get();
+   $users = DB::table('users')->where("id",2)->get(); 
     dd($users);
 });
 
