@@ -7,6 +7,8 @@ Route::get('/', function () {
     // return view('welcome');
 
     // $users = DB::select('select * from users');
+    $user = DB::insert('insert into users (name, email, password) values(?,?,?)',['Umar Imam', 'umar.dachias@gmail.com','Password']);
+    dd($user);
     $users = DB::select('select *from users where email=?',['omardachia@gmail.com']);
 
     dd($users);
